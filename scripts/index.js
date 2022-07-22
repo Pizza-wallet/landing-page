@@ -118,5 +118,5 @@ function removeParticle(e) {
 }
 
 document
-  .querySelectorAll('span')
-  .forEach((span) => span.addEventListener('click', pop));
+  .querySelectorAll('body')
+  .forEach((body) => body.addEventListener('click', pop));
