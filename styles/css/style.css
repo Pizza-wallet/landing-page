@@ -161,7 +161,15 @@ particle {
   }
 }
 
-/* Test for button */
+/* css for main button */
+.new-button-container {
+  height: 100%;
+}
+.new-button {
+  display: flex;
+  justify-content: center;
+}
+
 .btn {
   cursor: pointer;
 }
