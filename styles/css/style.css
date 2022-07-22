@@ -19,6 +19,10 @@ body {
   display: inline-block;
 }
 
+.content-container {
+  height: 100%;
+}
+
 .logo {
   --imgw: 1920;
   --imgh: 1080;
