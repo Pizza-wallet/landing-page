@@ -1,4 +1,5 @@
 .new-button-container {
+  display: flex;
   height: 100%;
 }
 .new-button {

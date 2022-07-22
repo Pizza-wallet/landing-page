@@ -42,10 +42,6 @@ function createParticle(x, y, type) {
       particle.style.fontSize = `${Math.random() * 24 + 20}px`;
       width = height = 'auto';
       break;
-
-    case 'pizza':
-      particle.style.backgroundImage = 'url(pizza-logo.png)';
-      break;
   }
 
   particle.style.width = `${width}px`;
