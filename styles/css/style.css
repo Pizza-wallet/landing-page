@@ -172,18 +172,19 @@ particle {
   display: block;
   padding: 5px 15px;
   border-radius: 5px;
-  border: 4px solid #000;
+  border: 4px solid #e5e4f9;
 }
 
 .new-button a span:hover {
   background: var(--dirty-white-2);
   color: #000;
+  border: 4px solid #000;
 }
 
 .new-button a:hover {
   /* /box-shadow: 0 4px 0 #000, 0 3px 0px 3px var(--brand-blue);/ */
-  box-shadow: 0 0 2px var(--brand-blue), 0 0 6px var(--brand-blue),
-    0 0 9px var(--brand-blue), 0 0 15px #030b55;
+  box-shadow: 0 0 2px var(--brand-blue-80), 0 0 6px var(--brand-blue-80),
+    0 0 9px var(--brand-blue-80), 0 0 15px #030b55;
   font-weight: bold;
 }
 
