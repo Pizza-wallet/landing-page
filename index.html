@@ -20,25 +20,42 @@
   </head>
 
   <body>
-    <div data-type="gesture" class="navbar">
-      <div data-type="gesture" class="icon-container">
-        <a href="https://twitter.com/Pizza__Wallet" target="_blank">
-          <i class="fa fa-twitter icons" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.instagram.com/pizza__wallet/" target="_blank">
-          <i class="fa fa-instagram icons" aria-hidden="true"></i>
-        </a>
+    <div onmouseover="playMusic()">
+      <div data-type="gesture" class="navbar">
+        <div data-type="gesture" class="icon-container">
+          <a href="https://twitter.com/Pizza__Wallet" target="_blank">
+            <i class="fa fa-twitter icons" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/pizza__wallet/" target="_blank">
+            <i class="fa fa-instagram icons" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
-    </div>
-    <div data-type="gesture" class="logo" id="background-image"></div>
+      <div data-type="gesture" class="logo" id="background-image"></div>
 
-    <div data-type="gesture" class="new-button-container">
-      <div data-type="gesture" class="new-button">
-        <a class="btn">
-          <span class="link" data-type="gesture">GET A SLICE</span>
-        </a>
+      <div data-type="gesture" class="new-button-container">
+        <div data-type="gesture" class="new-button">
+          <a class="btn">
+            <span class="link" data-type="gesture">GET A SLICE</span>
+          </a>
+        </div>
       </div>
     </div>
+
+    <audio id="divAudio" loop>
+      <source src="neon-flicker-fx.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+      var vAudio = document.getElementById('divAudio');
+      var hasInit = false;
+      function playMusic() {
+        if (!hasInit) {
+          hasInit = true;
+          vAudio.play();
+        }
+      }
+    </script>
 
     <script src="index.js"></script>
   </body>
