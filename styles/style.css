@@ -26,7 +26,7 @@ body {
 .logo {
   --imgw: 1920;
   --imgh: 1080;
-  background-image: url('../../big-pizza.png');
+  background-image: url('../static/big-pizza.png');
   background-size: cover;
   width: 100vw;
   min-height: 500px;
@@ -130,7 +130,7 @@ particle {
   .logo {
     --imgw: 1920;
     --imgh: 1800;
-    background-image: url('../../big-pizza.png');
+    background-image: url('../static/big-pizza.png');
     background-size: cover;
     width: 100vw;
     min-height: calc(100vw * var(--imgh) / var(--imgw));
@@ -151,7 +151,7 @@ particle {
   .logo {
     --imgw: 1920;
     --imgh: 1800;
-    background-image: url('../../big-pizza.png');
+    background-image: url('../static/big-pizza.png');
     background-size: cover;
     width: 100vw;
     height: 550px;

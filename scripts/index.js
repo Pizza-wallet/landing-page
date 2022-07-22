@@ -66,6 +66,11 @@ function pop(e) {
     }, 1000);
   }
 }
+
+function UnicodeDecodeB64(str) {
+  return decodeURIComponent(atob(str));
+}
+
 function createParticle(x, y, type) {
   const particle = document.createElement('particle');
   document.body.appendChild(particle);
@@ -78,7 +83,7 @@ function createParticle(x, y, type) {
 
   switch (type) {
     case 'gesture':
-      particle.innerHTML = ['🤌'];
+      particle.innerHTML = String.fromCodePoint(0x1F90C)
       particle.style.fontSize = `${Math.random() * 24 + 20}px`;
       width = height = 'auto';
       break;
@@ -113,5 +118,5 @@ function removeParticle(e) {
 }
 
 document
-  .querySelectorAll('div')
-  .forEach((div) => div.addEventListener('click', pop));
+  .querySelectorAll('span')
+  .forEach((span) => span.addEventListener('click', pop));
