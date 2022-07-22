@@ -46,12 +46,6 @@ body {
   width: 130px; /* Need a specific value to work */
 }
 
-footer {
-  height: 100%;
-  width: 100%;
-  background: radial-gradient(circle at bottom, #09243b, #041324);
-}
-
 .icon-container {
   margin-left: auto;
   margin-top: 15px;
@@ -164,7 +158,9 @@ particle {
 /* css for main button */
 .new-button-container {
   height: 100%;
+  background: radial-gradient(circle at top, #041628, #030e1d);
 }
+
 .new-button {
   display: flex;
   justify-content: center;
