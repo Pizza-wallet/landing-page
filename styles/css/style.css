@@ -15,6 +15,10 @@ body {
   overflow: hidden;
 }
 
+.font-aws {
+  display: inline-block;
+}
+
 .logo {
   --imgw: 1920;
   --imgh: 1080;
