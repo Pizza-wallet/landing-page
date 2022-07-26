@@ -15,18 +15,11 @@ body {
   overflow: hidden;
 }
 
-.font-aws {
-  display: inline-block;
-}
-
-.content-container {
-  height: 100%;
-}
-
 .logo {
+  top: 0%;
   --imgw: 1920;
   --imgh: 1080;
-  background-image: url('../static/big-pizza.png');
+  background-image: url('../public/media/big-pizza.png');
   background-size: cover;
   width: 100vw;
   min-height: 500px;
@@ -34,14 +27,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
-  position: relative;
-}
-
-.navbar {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  background: radial-gradient(circle at bottom, #061d32, #030e1c);
+  position: absolute;
 }
 
 .link-button-container {
@@ -55,15 +41,21 @@ body {
 }
 
 .icon-container {
-  margin-left: auto;
-  margin-top: 15px;
-  margin-right: 20px;
+  position: absolute;
+  display: flex;
+  right: 15px;
+  top: 15px;
+}
+
+.font-aws {
+  display: inline-block;
 }
 
 .icons {
+  padding: 8px;
+  text-decoration: solid;
   color: white;
-  margin-right: 10px;
-  font-size: 25px !important;
+  font-size: 20px;  
 }
 
 .icons:hover {
@@ -130,7 +122,7 @@ particle {
   .logo {
     --imgw: 1920;
     --imgh: 1800;
-    background-image: url('../static/big-pizza.png');
+    background-image: url('../public/media/big-pizza.png');
     background-size: cover;
     width: 100vw;
     min-height: calc(100vw * var(--imgh) / var(--imgw));
@@ -142,8 +134,8 @@ particle {
   }
   .icon-container {
     margin-left: auto;
-    margin-top: 15px;
-    margin-right: 10px;
+    margin-top: 5px;
+    margin-right: 0px;
   }
 }
 
@@ -151,7 +143,7 @@ particle {
   .logo {
     --imgw: 1920;
     --imgh: 1800;
-    background-image: url('../static/big-pizza.png');
+    background-image: url('../public/media/big-pizza.png');
     background-size: cover;
     width: 100vw;
     height: 550px;
@@ -161,12 +153,18 @@ particle {
     background-color: black;
     position: relative;
   }
+  .icon-container {
+    position: absolute;
+    display: flex;
+    right: 15px;
+    top: 15px;
+  }
 }
 
 /* css for main button */
 .new-button-container {
+  margin-top: 20px;
   height: 100%;
-  background: radial-gradient(circle at top, #041628, #030e1d);
 }
 
 .new-button {

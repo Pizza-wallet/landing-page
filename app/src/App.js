@@ -1,3 +1,6 @@
+import ReactAudioPlayer from 'react-audio-player';
+import './index.css';
+
 function pop(e) {
   let amount = 10;
   // Quick check if user clicked the button using a keyboard
@@ -67,10 +70,6 @@ function pop(e) {
   }
 }
 
-function UnicodeDecodeB64(str) {
-  return decodeURIComponent(atob(str));
-}
-
 function createParticle(x, y, type) {
   const particle = document.createElement('particle');
   document.body.appendChild(particle);
@@ -105,10 +104,7 @@ function createParticle(x, y, type) {
       },
     ],
     {
-      // duration: Math.random() * 1000 + 5000,
-      duration: 2000,
-      // easing: 'cubic-bezier(0, .9, .57, 1)',
-      // delay: delay,
+      duration: 1500,
     }
   );
   animation.onfinish = removeParticle;
@@ -120,3 +116,48 @@ function removeParticle(e) {
 document
   .querySelectorAll('body')
   .forEach((body) => body.addEventListener('click', pop));
+
+function App() {
+  return (
+    <div>
+      <div data-type="gesture" class="logo" id="background-image">
+        <div data-type="gesture">
+        <div data-type="gesture" class="icon-container">
+          <div class="font-aws">
+            <a href="https://www.instagram.com/pizza__wallet/" target="_blank" class="icons">
+              <i class="fa fa-instagram icons" aria-hidden="true"></i>
+            </a>
+          </div>
+          <div class="font-aws">
+            <a href="https://twitter.com/Pizza__Wallet" target="_blank" class="icons">
+              <i class="fa fa-instagram icons" aria-hidden="true"></i>
+            </a>
+          </div>
+          {/*
+          Must create a hamburger menu in order to add other navbar links
+          <div class="font-aws">
+            <a href="https://discord.gg/tTsPMW2RZX" target="_blank" class="icons">
+              Discord
+            </a>
+          </div>
+          */}
+        </div>
+        </div>
+      </div>
+      <div data-type="gesture" class="new-button-container">
+          <div data-type="gesture" class="new-button">
+            <a class="btn">
+              <span class="link" data-type="gesture">GET A SLICE</span>
+            </a>
+          </div>
+        </div>
+        <ReactAudioPlayer
+          src="../public/media/static_neon-flicker-fx.mp3"
+          autoPlay
+          loop
+        />
+    </div>
+  );
+}
+
+export default App;
