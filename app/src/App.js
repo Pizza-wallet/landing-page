@@ -124,12 +124,12 @@ function App() {
         <div data-type="gesture">
         <div data-type="gesture" class="icon-container">
           <div class="font-aws">
-            <a href="https://www.instagram.com/pizza__wallet/" target="_blank" class="icons">
+            <a href="https://www.instagram.com/pizza__wallet/" target="_blank" rel="noreferrer" class="icons">
               <i class="fa fa-instagram icons" aria-hidden="true"></i>
             </a>
           </div>
           <div class="font-aws">
-            <a href="https://twitter.com/Pizza__Wallet" target="_blank" class="icons">
+            <a href="https://twitter.com/Pizza__Wallet" target="_blank" rel="noreferrer" class="icons">
               <i class="fa fa-instagram icons" aria-hidden="true"></i>
             </a>
           </div>
@@ -151,6 +151,11 @@ function App() {
             </a>
           </div>
         </div>
+        {/*
+          <audio autoplay loop>
+            <source src="../public/media/static_neon-flicker-fx.mp3" type="audio/mpeg"></source>
+          </audio>
+        */}
         <ReactAudioPlayer
           src="../public/media/static_neon-flicker-fx.mp3"
           autoPlay
