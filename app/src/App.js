@@ -82,7 +82,7 @@ function createParticle(x, y, type) {
 
   switch (type) {
     case 'gesture':
-      particle.innerHTML = String.fromCodePoint(0x1F90C)
+      particle.innerHTML = String.fromCodePoint(0x1f90c);
       particle.style.fontSize = `${Math.random() * 24 + 20}px`;
       width = height = 'auto';
       break;
@@ -122,18 +122,28 @@ function App() {
     <div>
       <div data-type="gesture" class="logo" id="background-image">
         <div data-type="gesture">
-        <div data-type="gesture" class="icon-container">
-          <div class="font-aws">
-            <a href="https://www.instagram.com/pizza__wallet/" target="_blank" rel="noreferrer" class="icons">
-              <i class="fa fa-instagram icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          <div class="font-aws">
-            <a href="https://twitter.com/Pizza__Wallet" target="_blank" rel="noreferrer" class="icons">
-              <i class="fa fa-instagram icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          {/*
+          <div data-type="gesture" class="icon-container">
+            <div class="font-aws">
+              <a
+                href="https://www.instagram.com/pizza__wallet/"
+                target="_blank"
+                rel="noreferrer"
+                class="icons"
+              >
+                <i class="fa fa-instagram icons" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="font-aws">
+              <a
+                href="https://twitter.com/Pizza__Wallet"
+                target="_blank"
+                rel="noreferrer"
+                class="icons"
+              >
+                <i class="fa fa-instagram icons" aria-hidden="true"></i>
+              </a>
+            </div>
+            {/*
           Must create a hamburger menu in order to add other navbar links
           <div class="font-aws">
             <a href="https://discord.gg/tTsPMW2RZX" target="_blank" class="icons">
@@ -141,26 +151,28 @@ function App() {
             </a>
           </div>
           */}
-        </div>
+          </div>
         </div>
       </div>
       <div data-type="gesture" class="new-button-container">
-          <div data-type="gesture" class="new-button">
-            <a class="btn">
-              <span class="link" data-type="gesture">GET A SLICE</span>
-            </a>
-          </div>
+        <div data-type="gesture" class="new-button">
+          <a class="btn">
+            <span class="link" data-type="gesture">
+              GET A SLICE
+            </span>
+          </a>
         </div>
-        {/*
+      </div>
+      {/*
           <audio autoplay loop>
             <source src="../public/media/static_neon-flicker-fx.mp3" type="audio/mpeg"></source>
           </audio>
         */}
-        <ReactAudioPlayer
-          src="../public/media/static_neon-flicker-fx.mp3"
-          autoPlay
-          loop
-        />
+      <ReactAudioPlayer
+        src="../public/media/static_neon-flicker-fx.mp3"
+        autoPlay
+        loop
+      />
     </div>
   );
 }

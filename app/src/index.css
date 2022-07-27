@@ -16,18 +16,16 @@ body {
 }
 
 .logo {
-  top: 0%;
   --imgw: 1920;
-  --imgh: 1080;
+  --imgh: 1800;
   background-image: url('../public/media/big-pizza.png');
   background-size: cover;
   width: 100vw;
-  min-height: 500px;
+  height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
-  position: absolute;
 }
 
 .link-button-container {
@@ -55,7 +53,7 @@ body {
   padding: 8px;
   text-decoration: solid;
   color: white;
-  font-size: 20px;  
+  font-size: 20px;
 }
 
 .icons:hover {
