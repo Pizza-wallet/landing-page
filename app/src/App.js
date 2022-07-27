@@ -130,7 +130,7 @@ function App() {
                 rel="noreferrer"
                 class="icons"
               >
-                <i class="fa fa-instagram icons" aria-hidden="true"></i>
+                <i class="fa fa-twitter icons" aria-hidden="true"></i>
               </a>
             </div>
             <div class="font-aws">
