@@ -78,15 +78,10 @@ function createParticle(x, y, type) {
   let destinationX = (Math.random() - 0.5) * 3000;
   let destinationY = (Math.random() - 0.5) * 3000;
   let rotation = Math.random() * 520;
-  // let delay = Math.random() * 200;
 
-  switch (type) {
-    case 'gesture':
-      particle.innerHTML = String.fromCodePoint(0x1f90c);
-      particle.style.fontSize = `${Math.random() * 24 + 20}px`;
-      width = height = 'auto';
-      break;
-  }
+  particle.innerHTML = String.fromCodePoint(0x1f90c);
+  particle.style.fontSize = `${Math.random() * 24 + 20}px`;
+  width = height = 'auto';
 
   particle.style.width = `${width}px`;
   particle.style.height = `${height}px`;
@@ -120,9 +115,9 @@ document
 function App() {
   return (
     <div>
-      <div data-type="gesture" class="logo" id="background-image">
-        <div data-type="gesture">
-          <div data-type="gesture" class="icon-container">
+      <div class="logo" id="background-image">
+        <div>
+          <div class="icon-container">
             <div class="font-aws">
               <a
                 href="https://www.instagram.com/pizza__wallet/"
@@ -154,8 +149,8 @@ function App() {
           </div>
         </div>
       </div>
-      <div data-type="gesture" class="new-button-container">
-        <div data-type="gesture" class="new-button">
+      <div class="new-button-container">
+        <div class="new-button">
           <a class="btn">
             <span class="link" data-type="gesture">
               GET A SLICE
@@ -168,11 +163,11 @@ function App() {
             <source src="../public/media/static_neon-flicker-fx.mp3" type="audio/mpeg"></source>
           </audio>
         */}
-      <ReactAudioPlayer
+      {/* <ReactAudioPlayer
         src="../public/media/static_neon-flicker-fx.mp3"
         autoPlay
         loop
-      />
+      /> */}
     </div>
   );
 }
