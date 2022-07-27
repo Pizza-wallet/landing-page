@@ -163,11 +163,11 @@ function App() {
             <source src="../public/media/static_neon-flicker-fx.mp3" type="audio/mpeg"></source>
           </audio>
         */}
-      {/* <ReactAudioPlayer
+      <ReactAudioPlayer
         src="../public/media/static_neon-flicker-fx.mp3"
         autoPlay
         loop
-      /> */}
+      />
     </div>
   );
 }
