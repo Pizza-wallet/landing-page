@@ -130,7 +130,7 @@ function App() {
           </div>
           <div class="font-aws">
             <a href="https://twitter.com/Pizza__Wallet" target="_blank" rel="noreferrer" class="icons">
-              <i class="fa fa-instagram icons" aria-hidden="true"></i>
+              <i class="fa fa-twitter icons" aria-hidden="true"></i>
             </a>
           </div>
           {/*
