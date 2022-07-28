@@ -20,6 +20,7 @@ export const tsparticleConfig = {
       type: 'image',
       image: {
         src: 'https://res.cloudinary.com/dsj3kwygd/image/upload/v1659000816/handGesture_gjxjlh.png',
+        width: 20px,
       },
     },
     opacity: {
