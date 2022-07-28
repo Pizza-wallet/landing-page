@@ -17,17 +17,10 @@ export const tsparticleConfig = {
       },
     },
     shape: {
-      options: {
-        character: {
-          value: [String.fromCodePoint(0x1f90c)],
-          font: 'Verdana',
-          style: '',
-          weight: '400',
-          fill: true,
-          fontSize: '50px',
-        },
+      type: 'image',
+      image: {
+        src: 'https://res.cloudinary.com/dsj3kwygd/image/upload/v1659000816/handGesture_gjxjlh.png',
       },
-      type: 'char',
     },
     opacity: {
       value: 1,
