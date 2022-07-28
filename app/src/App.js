@@ -1,30 +1,21 @@
 import ReactAudioPlayer from 'react-audio-player';
 import './index.css';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import { tsparticleConfig } from './tsparticleConfig';
 
-function pop(e) {
-  let amount = 10;
-  // Quick check if user clicked the button using a keyboard
-  if (e.clientX === 0 && e.clientY === 0) {
-    const bbox = e.target.getBoundingClientRect();
-    const x = bbox.left + bbox.width / 2;
-    const y = bbox.top + bbox.height / 2;
-    for (let i = 0; i < 30; i++) {
-      // We call the function createParticle 30 times
-      // We pass the coordinates of the button for x & y values
-      createParticle(x, y, e.target.dataset.type);
-    }
-  } else {
-    for (let i = 0; i < amount; i++) {
-      createParticle(
-        e.clientX,
-        e.clientY + window.scrollY,
-        e.target.dataset.type
-      );
-    }
-  }
+function App() {
+  const particlesInit = async (main) => {
+    console.log(main);
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    await loadFull(main);
+  };
 
-  if (e.target.className === 'link') {
-    // assign one of the 7 links randomly
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
+  const handleButtonClick = () => {
     const links = [
       'https://twitter.com/intent/tweet?text=The+most+guarded+secret+in+the+world+%F0%9F%8D%95.+%0D%0A%0D%0AI+am+registering+to+become+a+special+ingredient+for+the+crypto+secret+sauce+recipe+%40Pizza__Wallet+is+making.+%0D%0A%0D%0AUna+buona+pizza+non+%C3%A8+una+pizza+che+mangi+una+volta%2C+%C3%A8+una+pizza+che+vuoi+mangiare+sempre.%0D%0A%0D%0A%F0%9F%8D%95%F0%9F%8D%9503495+%F0%9F%8D%95%F0%9F%8D%95+',
       'https://twitter.com/intent/tweet?text=The+most+guarded+secret+in+the+world+%F0%9F%8D%95.+%0D%0A%0D%0AI+am+registering+to+become+a+special+ingredient+for+the+crypto+secret+sauce+recipe+%40Pizza__Wallet+is+making.+%0D%0A%0D%0AUna+buona+pizza+non+%C3%A8+una+pizza+che+mangi+una+volta%2C+%C3%A8+una+pizza+che+vuoi+mangiare+sempre.%0D%0A%0D%0A%F0%9F%8D%95%F0%9F%8D%9504307+%F0%9F%8D%95%F0%9F%8D%95+',
@@ -67,75 +58,37 @@ function pop(e) {
     setTimeout(function () {
       window.open(links[randomIndex], '_blank');
     }, 1000);
-  }
-}
+  };
 
-function createParticle(x, y, type) {
-  const particle = document.createElement('particle');
-  document.body.appendChild(particle);
-  let width = Math.floor(Math.random() * 30 + 8);
-  let height = width;
-  let destinationX = (Math.random() - 0.5) * 3000;
-  let destinationY = (Math.random() - 0.5) * 3000;
-  let rotation = Math.random() * 520;
-
-  particle.innerHTML = String.fromCodePoint(0x1f90c);
-  particle.style.fontSize = `${Math.random() * 24 + 20}px`;
-  width = height = 'auto';
-
-  particle.style.width = `${width}px`;
-  particle.style.height = `${height}px`;
-  const animation = particle.animate(
-    [
-      {
-        transform: `translate(-50%, -50%) translate(${x}px, ${y}px) rotate(0deg)`,
-        opacity: 1,
-      },
-      {
-        transform: `translate(-50%, -50%) translate(${x + destinationX}px, ${
-          y + destinationY
-        }px) rotate(${rotation}deg)`,
-        opacity: 1,
-      },
-    ],
-    {
-      duration: 1500,
-    }
-  );
-  animation.onfinish = removeParticle;
-}
-function removeParticle(e) {
-  e.srcElement.effect.target.remove();
-}
-
-document
-  .querySelectorAll('body')
-  .forEach((body) => body.addEventListener('click', pop));
-
-function App() {
   return (
     <div>
-      <div class="logo" id="background-image">
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={tsparticleConfig}
+      />
+      <div className="logo" id="background-image">
         <div>
-          <div class="icon-container">
-            <div class="font-aws">
+          <div className="icon-container">
+            <div className="font-aws">
               <a
                 href="https://www.instagram.com/pizza__wallet/"
                 target="_blank"
                 rel="noreferrer"
-                class="icons"
+                className="icons"
               >
-                <i class="fa fa-twitter icons" aria-hidden="true"></i>
+                <i className="fa fa-twitter icons" aria-hidden="true"></i>
               </a>
             </div>
-            <div class="font-aws">
+            <div className="font-aws">
               <a
                 href="https://twitter.com/Pizza__Wallet"
                 target="_blank"
                 rel="noreferrer"
-                class="icons"
+                className="icons"
               >
-                <i class="fa fa-instagram icons" aria-hidden="true"></i>
+                <i className="fa fa-instagram icons" aria-hidden="true"></i>
               </a>
             </div>
             {/*
@@ -149,10 +102,10 @@ function App() {
           </div>
         </div>
       </div>
-      <div class="new-button-container">
-        <div class="new-button">
-          <a class="btn">
-            <span class="link" data-type="gesture">
+      <div className="new-button-container">
+        <div onClick={handleButtonClick} className="new-button">
+          <a className="btn">
+            <span className="link" data-type="gesture">
               GET A SLICE
             </span>
           </a>
