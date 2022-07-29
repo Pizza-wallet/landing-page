@@ -51,6 +51,19 @@ export const tsparticleConfig = {
       outMode: 'destroy',
       gravity: {
         enable: true,
+        acceleration: 20,
+      },
+    },
+    rotate: {
+      value: {
+        min: 0,
+        max: 360,
+      },
+      direction: 'random',
+      move: true,
+      animation: {
+        enable: true,
+        speed: 30,
       },
     },
   },
