@@ -7,9 +7,8 @@
 body {
   margin: 0;
   padding: 0;
-
   background-image: url('./brick2.png'),
-    radial-gradient(circle at top, #041628, #030e1d, #0b2a44, #041628, #030e1a),
+    radial-gradient(#0f3250, #0d2c47, #082238, #041324, #030e1c),
     url('./brick3.png');
 
   background-size: cover;
