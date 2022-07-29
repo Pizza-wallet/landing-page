@@ -28,7 +28,7 @@ body {
   background-image: url('../public/media/big-pizza.png');
   background-size: cover;
   width: 100vw;
-  height: 500px;
+  min-height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
