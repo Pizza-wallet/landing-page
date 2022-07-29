@@ -1,8 +1,8 @@
-import ReactAudioPlayer from 'react-audio-player';
 import './index.css';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { tsparticleConfig } from './tsparticleConfig';
+import ReactPlayer from 'react-player';
 
 function App() {
   const particlesInit = async (main) => {
@@ -60,6 +60,14 @@ function App() {
     }, 1000);
   };
 
+  let videoUrl =
+    'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-chrome.webm';
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if (isSafari) {
+    videoUrl =
+      'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mp4';
+  }
+
   return (
     <div>
       <Particles
@@ -68,6 +76,25 @@ function App() {
         loaded={particlesLoaded}
         options={tsparticleConfig}
       />
+      <div className="videoContainer">
+        <ReactPlayer
+          width="100%"
+          height="100%"
+          playing={true}
+          loop
+          muted
+          url={videoUrl}
+        />
+        <div className="new-button-container">
+          <div onClick={handleButtonClick} className="new-button">
+            <a className="btn">
+              <span className="link" data-type="gesture">
+                GET A SLICE
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="logo" id="background-image">
         <div>
           <div className="icon-container">
@@ -91,36 +118,21 @@ function App() {
                 <i className="fa fa-instagram icons" aria-hidden="true"></i>
               </a>
             </div>
-            {/*
-          Must create a hamburger menu in order to add other navbar links
-          <div class="font-aws">
-            <a href="https://discord.gg/tTsPMW2RZX" target="_blank" class="icons">
-              Discord
-            </a>
-          </div>
-          */}
           </div>
         </div>
       </div>
-      <div className="new-button-container">
-        <div onClick={handleButtonClick} className="new-button">
-          <a className="btn">
-            <span className="link" data-type="gesture">
-              GET A SLICE
-            </span>
-          </a>
-        </div>
-      </div>
-      {/*
-          <audio autoplay loop>
-            <source src="../public/media/static_neon-flicker-fx.mp3" type="audio/mpeg"></source>
-          </audio>
-        */}
-      <ReactAudioPlayer
-        src="../public/media/static_neon-flicker-fx.mp3"
-        autoPlay
-        loop
-      />
+
+      {/* <video width="100%" height="100%" autoplay loop muted playinline>
+            <source
+              src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-chrome.webm"
+              type="video/webm"
+            ></source>
+            <source
+              src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mp4"
+              type="video/mp4"
+              codecs="hvc1"
+            ></source>
+          </video> */}
     </div>
   );
 }
