@@ -3,7 +3,7 @@ export const tsparticleConfig = {
     enable: true,
     zIndex: 100,
   },
-  fpsLimit: 60,
+  fpsLimit: 80,
   particles: {
     number: {
       value: 0,
@@ -44,7 +44,7 @@ export const tsparticleConfig = {
           y: 1200,
         },
       },
-      speed: 20,
+      speed: 30,
       direction: 'none',
       random: false,
       straight: false,
@@ -78,7 +78,7 @@ export const tsparticleConfig = {
     },
     modes: {
       push: {
-        quantity: 10,
+        quantity: 6,
       },
     },
   },
