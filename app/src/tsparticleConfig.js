@@ -26,11 +26,11 @@ export const tsparticleConfig = {
       value: 1,
     },
     size: {
-      value: 20,
+      value: 18,
       animation: {
         enable: true,
         speed: 15,
-        minimumValue: 10,
+        minimumValue: 18,
         sync: false,
         startValue: 'min',
         count: 1,
