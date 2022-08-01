@@ -21,9 +21,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('./brick2.png'),
-    radial-gradient(#0f3250, #0d2c47, #082238, #041324, #030e1c),
-    url('./brick3.png');
-
+    radial-gradient(#0f3250, #0d2c47, #082238, #041324, #030e1c);
   background-size: cover;
   width: 100vw;
   max-width: 100vw;

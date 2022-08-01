@@ -132,8 +132,7 @@ function App() {
             ></source>
             <source
               src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mp4"
-              type="video/mp4"
-              codecs="hvc1"
+              type='video/mp4; codecs="hvc1"'
             ></source>
           </video> */}
     </div>
