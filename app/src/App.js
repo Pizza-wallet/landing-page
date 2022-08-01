@@ -76,26 +76,29 @@ function App() {
         loaded={particlesLoaded}
         options={tsparticleConfig}
       />
-      <div className="videoContainer">
-        <ReactPlayer
-          width="100%"
-          height="100%"
-          playing={true}
-          loop
-          muted
-          url={videoUrl}
-        />
-        <div className="new-button-container">
-          <div onClick={handleButtonClick} className="new-button">
-            <a className="btn">
-              <span className="link" data-type="gesture">
-                GET A SLICE
-              </span>
-            </a>
+      <div className="absoluteContainer">
+        <div className="videoContainer">
+          <ReactPlayer
+            width="100%"
+            height="100%"
+            className="player"
+            playing={true}
+            loop
+            muted
+            url={videoUrl}
+          />
+          <div className="new-button-container">
+            <div className="new-button">
+              <a onClick={handleButtonClick} className="btn">
+                <span className="link" data-type="gesture">
+                  GET A SLICE
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div className="logo" id="background-image">
+      <div className="social-icons">
         <div>
           <div className="icon-container">
             <div className="font-aws">

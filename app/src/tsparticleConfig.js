@@ -26,7 +26,7 @@ export const tsparticleConfig = {
       value: 1,
     },
     size: {
-      value: { min: 25, max: 25 },
+      value: 20,
       animation: {
         enable: true,
         speed: 15,
@@ -44,15 +44,15 @@ export const tsparticleConfig = {
           y: 1200,
         },
       },
-      speed: { min: 10, max: 20 },
+      speed: 20,
       direction: 'none',
       random: false,
       straight: false,
       outMode: 'destroy',
-      gravity: {
-        enable: true,
-        acceleration: 20,
-      },
+      // gravity: {
+      //   enable: true,
+      //   acceleration: 70,
+      // },
     },
     rotate: {
       value: {
@@ -79,7 +79,7 @@ export const tsparticleConfig = {
     modes: {
       trail: {
         delay: 0.1,
-        quantity: 20,
+        quantity: 10,
       },
     },
   },
