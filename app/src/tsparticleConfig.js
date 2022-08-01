@@ -72,13 +72,12 @@ export const tsparticleConfig = {
     events: {
       onclick: {
         enable: true,
-        mode: 'trail',
+        mode: 'push',
       },
       resize: true,
     },
     modes: {
-      trail: {
-        delay: 0.1,
+      push: {
         quantity: 10,
       },
     },
