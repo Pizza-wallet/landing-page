@@ -103,7 +103,7 @@ function App() {
           <div className="icon-container">
             <div className="font-aws">
               <a
-                href="https://www.instagram.com/pizza__wallet/"
+                href="https://twitter.com/Pizza__Wallet"
                 target="_blank"
                 rel="noreferrer"
                 className="icons"
@@ -113,7 +113,7 @@ function App() {
             </div>
             <div className="font-aws">
               <a
-                href="https://twitter.com/Pizza__Wallet"
+                href="https://www.instagram.com/pizza__wallet/"
                 target="_blank"
                 rel="noreferrer"
                 className="icons"
