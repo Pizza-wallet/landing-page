@@ -64,35 +64,20 @@ function App() {
     'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-chrome.webm';
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   if (isSafari) {
-    videoUrl = [
-      'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-rgb-safari.mp4',
-      'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-alpha-safari.mp4',
-    ];
-    // videoUrl = [
-    //   'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mov',
-    // ];
+    videoUrl =
+      'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mp4';
   }
 
+  const browserSpec = isSafari ? 'safari' : 'other';
+
   return (
-    <div>
+    <div className={browserSpec}>
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={tsparticleConfig}
       />
-      {/* <video width="100%" height="100%" autoPlay loop muted>
-        <source
-          src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-chrome.webm"
-          type="video/webm"
-        ></source>
-        <source
-          src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mov"
-          // type="video/quicktime"
-          // codecs="hvc1"
-          type='video/mp4; codecs="hvc1"'
-        ></source>
-      </video> */}
       <div className="absoluteContainer">
         <div className="videoContainer">
           <ReactPlayer

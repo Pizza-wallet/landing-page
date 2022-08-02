@@ -30,6 +30,21 @@ body {
   overflow: hidden;
 }
 
+.other {
+  background-image: url('./brick2.png'),
+    radial-gradient(#0f3250, #0d2c47, #082238, #041324, #030e1c);
+  background-size: cover;
+  height: 100vh;
+  max-height: 100vh;
+}
+
+.safari {
+  background-color: black;
+  background-size: cover;
+  height: 100vh;
+  max-height: 100vh;
+}
+
 .social-icons {
   width: 100vw;
   min-height: 500px;
