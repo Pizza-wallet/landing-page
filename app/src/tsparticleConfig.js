@@ -49,10 +49,10 @@ export const tsparticleConfig = {
       random: false,
       straight: false,
       outMode: 'destroy',
-      // gravity: {
-      //   enable: true,
-      //   acceleration: 70,
-      // },
+      gravity: {
+        enable: true,
+        acceleration: 70,
+      },
     },
     rotate: {
       value: {
@@ -63,7 +63,7 @@ export const tsparticleConfig = {
       move: true,
       animation: {
         enable: true,
-        speed: 30,
+        speed: 150,
       },
     },
   },
