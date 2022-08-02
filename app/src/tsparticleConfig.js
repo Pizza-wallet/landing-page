@@ -44,7 +44,7 @@ export const tsparticleConfig = {
           y: 1200,
         },
       },
-      speed: 30,
+      speed: 25,
       direction: 'none',
       random: false,
       straight: false,
