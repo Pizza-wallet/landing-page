@@ -81,6 +81,18 @@ function App() {
         loaded={particlesLoaded}
         options={tsparticleConfig}
       />
+      {/* <video width="100%" height="100%" autoPlay loop muted>
+        <source
+          src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-chrome.webm"
+          type="video/webm"
+        ></source>
+        <source
+          src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mov"
+          // type="video/quicktime"
+          // codecs="hvc1"
+          type='video/mp4; codecs="hvc1"'
+        ></source>
+      </video> */}
       <div className="absoluteContainer">
         <div className="videoContainer">
           <ReactPlayer
@@ -129,17 +141,6 @@ function App() {
           </div>
         </div>
       </div>
-
-      {/* <video width="100%" height="100%" autoplay loop muted playinline>
-            <source
-              src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-chrome.webm"
-              type="video/webm"
-            ></source>
-            <source
-              src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mov"
-              type='video/mp4; codecs="hvc1"'
-            ></source>
-          </video> */}
     </div>
   );
 }

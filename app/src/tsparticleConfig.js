@@ -38,20 +38,20 @@ export const tsparticleConfig = {
     },
     move: {
       enable: true,
-      attract: {
-        rotate: {
-          x: 600,
-          y: 1200,
-        },
-      },
-      speed: 20,
+      speed: 15,
       direction: 'none',
+      random: true,
+      straight: false,
+      // angle: {
+      //   offset: 100,
+      //   value: 50,
+      // },
       random: false,
       straight: false,
       outMode: 'destroy',
       gravity: {
         enable: true,
-        acceleration: 60,
+        acceleration: 30,
       },
     },
     rotate: {
@@ -63,7 +63,7 @@ export const tsparticleConfig = {
       move: true,
       animation: {
         enable: true,
-        speed: 150,
+        speed: 100,
       },
     },
   },
