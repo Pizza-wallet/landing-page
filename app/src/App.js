@@ -65,7 +65,7 @@ function App() {
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   if (isSafari) {
     videoUrl =
-      'storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-alpha-safari.mp4';
+      'storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mp4';
   }
 
   const browserSpec = isSafari ? 'safari' : 'other';
