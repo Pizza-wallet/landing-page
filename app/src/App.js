@@ -98,6 +98,7 @@ function App() {
               </a>
             </div>
           </div>
+        </div>
       </div>
       <div className="social-icons">
         <div>
