@@ -68,6 +68,9 @@ function App() {
       'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-rgb-safari.mp4',
       'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-alpha-safari.mp4',
     ];
+    // videoUrl = [
+    //   'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mov',
+    // ];
   }
 
   return (
@@ -133,7 +136,7 @@ function App() {
               type="video/webm"
             ></source>
             <source
-              src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mp4"
+              src="https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-safari.mov"
               type='video/mp4; codecs="hvc1"'
             ></source>
           </video> */}

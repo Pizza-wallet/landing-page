@@ -44,14 +44,14 @@ export const tsparticleConfig = {
           y: 1200,
         },
       },
-      speed: 25,
+      speed: 20,
       direction: 'none',
       random: false,
       straight: false,
       outMode: 'destroy',
       gravity: {
         enable: true,
-        acceleration: 70,
+        acceleration: 60,
       },
     },
     rotate: {
