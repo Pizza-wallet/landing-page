@@ -1,30 +1,21 @@
-import ReactAudioPlayer from 'react-audio-player';
 import './index.css';
+import Particles from 'react-tsparticles';
+import { loadFull } from 'tsparticles';
+import { tsparticleConfig } from './tsparticleConfig';
+import ReactPlayer from 'react-player';
 
-function pop(e) {
-  let amount = 10;
-  // Quick check if user clicked the button using a keyboard
-  if (e.clientX === 0 && e.clientY === 0) {
-    const bbox = e.target.getBoundingClientRect();
-    const x = bbox.left + bbox.width / 2;
-    const y = bbox.top + bbox.height / 2;
-    for (let i = 0; i < 30; i++) {
-      // We call the function createParticle 30 times
-      // We pass the coordinates of the button for x & y values
-      createParticle(x, y, e.target.dataset.type);
-    }
-  } else {
-    for (let i = 0; i < amount; i++) {
-      createParticle(
-        e.clientX,
-        e.clientY + window.scrollY,
-        e.target.dataset.type
-      );
-    }
-  }
+function App() {
+  const particlesInit = async (main) => {
+    console.log(main);
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    await loadFull(main);
+  };
 
-  if (e.target.className === 'link') {
-    // assign one of the 7 links randomly
+  const particlesLoaded = (container) => {
+    console.log(container);
+  };
+
+  const handleButtonClick = () => {
     const links = [
       'https://twitter.com/intent/tweet?text=The+most+guarded+secret+in+the+world+%F0%9F%8D%95.+%0D%0A%0D%0AI+am+registering+to+become+a+special+ingredient+for+the+crypto+secret+sauce+recipe+%40Pizza__Wallet+is+making.+%0D%0A%0D%0AUna+buona+pizza+non+%C3%A8+una+pizza+che+mangi+una+volta%2C+%C3%A8+una+pizza+che+vuoi+mangiare+sempre.%0D%0A%0D%0A%F0%9F%8D%95%F0%9F%8D%9503495+%F0%9F%8D%95%F0%9F%8D%95+',
       'https://twitter.com/intent/tweet?text=The+most+guarded+secret+in+the+world+%F0%9F%8D%95.+%0D%0A%0D%0AI+am+registering+to+become+a+special+ingredient+for+the+crypto+secret+sauce+recipe+%40Pizza__Wallet+is+making.+%0D%0A%0D%0AUna+buona+pizza+non+%C3%A8+una+pizza+che+mangi+una+volta%2C+%C3%A8+una+pizza+che+vuoi+mangiare+sempre.%0D%0A%0D%0A%F0%9F%8D%95%F0%9F%8D%9504307+%F0%9F%8D%95%F0%9F%8D%95+',
@@ -64,103 +55,80 @@ function pop(e) {
       // assign fallback url
       randomIndex = 0;
     }
-    setTimeout(function () {
-      window.open(links[randomIndex], '_blank');
-    }, 1000);
-  }
-}
+    // setTimeout(function () {
+    //   window.open(links[randomIndex], '_blank');
+    // }, 1000);
+    window.open(links[randomIndex], '_blank');
+  };
 
-function createParticle(x, y, type) {
-  const particle = document.createElement('particle');
-  document.body.appendChild(particle);
-  let width = Math.floor(Math.random() * 30 + 8);
-  let height = width;
-  let destinationX = (Math.random() - 0.5) * 3000;
-  let destinationY = (Math.random() - 0.5) * 3000;
-  let rotation = Math.random() * 520;
-  // let delay = Math.random() * 200;
-
-  switch (type) {
-    case 'gesture':
-      particle.innerHTML = String.fromCodePoint(0x1F90C)
-      particle.style.fontSize = `${Math.random() * 24 + 20}px`;
-      width = height = 'auto';
-      break;
+  let videoUrl =
+    'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-chrome.webm';
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if (isSafari) {
+    videoUrl = [
+      'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-rgb-safari.mp4',
+      'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-alpha-safari.mp4',
+    ];
   }
 
-  particle.style.width = `${width}px`;
-  particle.style.height = `${height}px`;
-  const animation = particle.animate(
-    [
-      {
-        transform: `translate(-50%, -50%) translate(${x}px, ${y}px) rotate(0deg)`,
-        opacity: 1,
-      },
-      {
-        transform: `translate(-50%, -50%) translate(${x + destinationX}px, ${
-          y + destinationY
-        }px) rotate(${rotation}deg)`,
-        opacity: 1,
-      },
-    ],
-    {
-      duration: 1500,
-    }
-  );
-  animation.onfinish = removeParticle;
-}
-function removeParticle(e) {
-  e.srcElement.effect.target.remove();
-}
+  const browserSpec = isSafari ? 'safari' : 'other';
 
-document
-  .querySelectorAll('body')
-  .forEach((body) => body.addEventListener('click', pop));
-
-function App() {
   return (
-    <div>
-      <div data-type="gesture" class="logo" id="background-image">
-        <div data-type="gesture">
-        <div data-type="gesture" class="icon-container">
-          <div class="font-aws">
-            <a href="https://www.instagram.com/pizza__wallet/" target="_blank" rel="noreferrer" class="icons">
-              <i class="fa fa-instagram icons" aria-hidden="true"></i>
-            </a>
+    <div className={browserSpec}>
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={tsparticleConfig}
+      />
+      <div className="absoluteContainer">
+        <div className="videoContainer">
+          <ReactPlayer
+            width="100%"
+            height="100%"
+            className="player"
+            playing={true}
+            loop
+            muted
+            url={videoUrl}
+          />
+          <div className="new-button-container">
+            <div className="new-button">
+              <a onClick={handleButtonClick} className="btn">
+                <span className="link" data-type="gesture">
+                  GET A SLICE
+                </span>
+              </a>
+            </div>
           </div>
-          <div class="font-aws">
-            <a href="https://twitter.com/Pizza__Wallet" target="_blank" rel="noreferrer" class="icons">
-              <i class="fa fa-twitter icons" aria-hidden="true"></i>
-            </a>
-          </div>
-          {/*
-          Must create a hamburger menu in order to add other navbar links
-          <div class="font-aws">
-            <a href="https://discord.gg/tTsPMW2RZX" target="_blank" class="icons">
-              Discord
-            </a>
-          </div>
-          */}
-        </div>
         </div>
       </div>
-      <div data-type="gesture" class="new-button-container">
-          <div data-type="gesture" class="new-button">
-            <a class="btn">
-              <span class="link" data-type="gesture">GET A SLICE</span>
-            </a>
+      <div className="social-icons">
+        <div>
+          <div className="icon-container">
+            <div className="font-aws">
+              <a
+                href="https://twitter.com/Pizza__Wallet"
+                target="_blank"
+                rel="noreferrer"
+                className="icons"
+              >
+                <i className="fa fa-twitter icons" aria-hidden="true"></i>
+              </a>
+            </div>
+            <div className="font-aws">
+              <a
+                href="https://www.instagram.com/pizza__wallet/"
+                target="_blank"
+                rel="noreferrer"
+                className="icons"
+              >
+                <i className="fa fa-instagram icons" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
         </div>
-        {/*
-          <audio autoplay loop>
-            <source src="../public/media/static_neon-flicker-fx.mp3" type="audio/mpeg"></source>
-          </audio>
-        */}
-        <ReactAudioPlayer
-          src="../public/media/static_neon-flicker-fx.mp3"
-          autoPlay
-          loop
-        />
+      </div>
     </div>
   );
 }
