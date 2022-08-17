@@ -107,18 +107,18 @@ function App() {
         <div>
           <div className="icon-container">
             <a
-              href="https://docs.pizzawallet.io/"
-              target="_blank"
-              className="nav-button-link"
-            >
-              <p className="nav-button">Documentation</p>
-            </a>
-            <a
               href="https://app.pizzawallet.io/"
               target="_blank"
               className="nav-button-link"
             >
               <p className="nav-button">Go to dApp</p>
+            </a>
+            <a
+              href="https://docs.pizzawallet.io/"
+              target="_blank"
+              className="nav-button-link"
+            >
+              <p className="nav-button">Documentation</p>
             </a>
             <div className="font-aws">
               <a
