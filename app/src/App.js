@@ -92,8 +92,8 @@ function App() {
             muted
             url={videoUrl}
           />
-          <div className="new-button-container">
-            <div className="new-button">
+          <div className="main-button-container">
+            <div className="main-button">
               <a onClick={handleButtonClick} className="btn">
                 <span className="link" data-type="gesture">
                   GET A SLICE
@@ -104,8 +104,20 @@ function App() {
         </div>
       </div>
       <div className="social-icons">
-        <div>
+        <div>        
           <div className="icon-container">
+          <a
+            href="https://docs.pizzawallet.io/"
+            target="_blank"
+            >
+              <p className="nav-button">Documentation</p>
+            </a>
+            <a
+            href="https://app.pizzawallet.io/"
+            target="_blank"
+            >
+              <p className="nav-button">Go to dApp</p>
+            </a>
             <div className="font-aws">
               <a
                 href="https://twitter.com/Pizza__Wallet"
