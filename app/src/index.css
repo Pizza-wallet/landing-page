@@ -17,10 +17,6 @@ div::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-a {
-  text-decoration: auto;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -102,14 +98,19 @@ body {
 
 .nav-button {
   color: white;
-  margin-right: 10px;
   cursor: pointer;
   font-family: 'Rubik', sans-serif;
+  margin: 8px 0 0 0;
 }
 
 .nav-button:hover {
   color: #6967c8;
   text-decoration: underline;
+}
+
+.nav-bar-link {
+  padding: 8px;
+  text-decoration: none;
 }
 
 .icons {
