@@ -108,7 +108,7 @@ body {
   text-decoration: underline;
 }
 
-.nav-bar-link {
+.nav-button-link {
   padding: 8px;
   text-decoration: none;
 }
@@ -238,8 +238,13 @@ particle {
     margin-right: 0;
   }
 
+  .nav-button-link {
+    padding: 10px 4px 4px 4px;
+    width: max-content;
+  }
+
   .font-aws a {
-    padding: 6px;
+    padding: 4px;
   }
 }
 
