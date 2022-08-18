@@ -111,14 +111,14 @@ function App() {
               target="_blank"
               className="nav-button-link"
             >
-              <p className="nav-button">Go to dApp</p>
+              <p className="nav-button">dApp</p>
             </a>
             <a
               href="https://docs.pizzawallet.io/"
               target="_blank"
               className="nav-button-link"
             >
-              <p className="nav-button">Documentation</p>
+              <p className="nav-button">Docs</p>
             </a>
             <div className="font-aws">
               <a
