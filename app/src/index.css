@@ -93,6 +93,24 @@ body {
 
 .font-aws {
   display: inline-block;
+  margin-top: 6px;
+}
+
+.nav-button {
+  color: white;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  margin: 8px 0 0 0;
+}
+
+.nav-button:hover {
+  color: #6967c8;
+  text-decoration: underline;
+}
+
+.nav-button-link {
+  padding: 8px;
+  text-decoration: none;
 }
 
 .icons {
@@ -118,7 +136,7 @@ particle {
 }
 
 /* css for main button */
-.new-button-container {
+.main-button-container {
   position: absolute;
   bottom: 30px;
   left: 0;
@@ -126,7 +144,7 @@ particle {
   margin: auto;
 }
 
-.new-button {
+.main-button {
   display: flex;
   justify-content: center;
 }
@@ -135,7 +153,7 @@ particle {
   cursor: pointer;
 }
 
-.new-button a span {
+.main-button a span {
   width: 100%;
   background: var(--brand-blue-80);
   display: block;
@@ -145,25 +163,25 @@ particle {
   font-family: 'Rubik', sans-serif;
 }
 
-.new-button a span:hover {
+.main-button a span:hover {
   background: var(--dirty-white-2);
   color: #000;
   border: 4px solid #000;
 }
 
-.new-button a:hover {
+.main-button a:hover {
   box-shadow: 0 0 2px var(--brand-blue-80), 0 0 6px var(--brand-blue-80),
     0 0 9px var(--brand-blue-80), 0 0 15px #030b55;
   font-weight: bold;
 }
 
-.new-button a:active {
+.main-button a:active {
   top: 4px;
   padding-bottom: 0px;
   box-shadow: 0 1px 0 #000;
 }
 
-.new-button a {
+.main-button a {
   display: flex;
   font: normal 22px/25px 'Patrick Hand', sans-serif;
   margin: 10px;
@@ -196,7 +214,7 @@ particle {
     bottom: 100px;
   }
 
-  .new-button-container {
+  .main-button-container {
     position: absolute;
     bottom: 70px;
     left: 0;
@@ -213,6 +231,20 @@ particle {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .nav-button {
+    font-size: 13px;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+
+  .nav-button-link {
+    padding: 10px 4px 4px 4px;
+    width: max-content;
+  }
+
+  .font-aws a {
+    padding: 4px;
   }
 }
 
