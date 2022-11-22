@@ -60,21 +60,20 @@ function App() {
     // }, 1000);
     window.open(links[randomIndex], '_blank');
   };
-
+  
   let videoUrl =
-    'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-chrome.webm';
+    'https://gateway.pinata.cloud/ipfs/QmQ6y8ygqJnCz7U67K54vd4iKKHb9gcfsFTbo5Rod9RYkP/Assets/pizza-wallet-neon-sign-chrome.webm';
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   if (isSafari) {
     videoUrl = [
-      'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-rgb-safari.mp4',
-      'https://storageapi.fleek.co/d1921602-c1d0-4d59-82e9-e36a2947b855-bucket/Animations/pizza-wallet-neon-sign-alpha-safari.mp4',
+      'https://gateway.pinata.cloud/ipfs/QmQ6y8ygqJnCz7U67K54vd4iKKHb9gcfsFTbo5Rod9RYkP/Assets/neon-sign-animation-transparent.mov'
     ];
   }
 
   const browserSpec = isSafari ? 'safari' : 'other';
 
   return (
-    <div className={browserSpec}>
+    <div>
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -107,11 +106,11 @@ function App() {
         <div>
           <div className="icon-container">
             <a
-              href="https://docs.pizzawallet.io/"
+              href="https://gateway.pinata.cloud/ipfs/QmYd1HcjaUE3mVCRbZjtnCx5CK72rtaKRFndE8GPvBSrko/Lite%20Paper.pdf"
               target="_blank"
               className="nav-button-link"
             >
-              <p className="nav-button">Docs</p>
+              <p className="nav-button">About</p>
             </a>
             <div className="font-aws">
               <a
