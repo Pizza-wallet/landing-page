@@ -108,6 +108,7 @@ function App() {
             <a
               href="https://gateway.pinata.cloud/ipfs/QmYd1HcjaUE3mVCRbZjtnCx5CK72rtaKRFndE8GPvBSrko/Lite%20Paper.pdf"
               target="_blank"
+              rel="noreferrer"
               className="nav-button-link"
             >
               <p className="nav-button">About</p>
