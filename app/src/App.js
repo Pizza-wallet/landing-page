@@ -106,7 +106,7 @@ function App() {
         <div>
           <div className="icon-container">
             <a
-              href="https://gateway.pinata.cloud/ipfs/QmYd1HcjaUE3mVCRbZjtnCx5CK72rtaKRFndE8GPvBSrko/Lite%20Paper.pdf"
+              href="https://docs.pizzawallet.io"
               target="_blank"
               rel="noreferrer"
               className="nav-button-link"
