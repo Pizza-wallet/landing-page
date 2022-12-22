@@ -2,7 +2,7 @@ import './index.css';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import { tsparticleConfig } from './tsparticleConfig';
-import ReactPlayer from 'react-player';
+
 
 function App() {
   const particlesInit = async (main) => {
@@ -61,58 +61,48 @@ function App() {
     window.open(links[randomIndex], '_blank');
   };
   
-  let videoUrl =
-    'https://gateway.pinata.cloud/ipfs/QmQ6y8ygqJnCz7U67K54vd4iKKHb9gcfsFTbo5Rod9RYkP/Assets/pizza-wallet-neon-sign-chrome.webm';
+  
+
+  // let videoUrl = ''
   var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   if (isSafari) {
-    videoUrl = [
-      'https://gateway.pinata.cloud/ipfs/QmQ6y8ygqJnCz7U67K54vd4iKKHb9gcfsFTbo5Rod9RYkP/Assets/neon-sign-animation-transparent.mov'
-    ];
+    
   }
 
   const browserSpec = isSafari ? 'safari' : 'other';
 
+  const background = require('./neon.png')
+
   return (
-    <div>
+    <>
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={tsparticleConfig}
       />
-      <div className="absoluteContainer">
-        <div className="videoContainer">
-          <ReactPlayer
-            width="100%"
-            height="100%"
-            className="player"
-            playing={true}
-            loop
-            muted
-            url={videoUrl}
-          />
-          <div className="main-button-container">
-            <div className="main-button">
-              <a onClick={handleButtonClick} className="btn">
-                <span className="link" data-type="gesture">
-                  GET A SLICE
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div className="social-icons">
         <div>
           <div className="icon-container">
             <a
-              href="https://docs.pizzawallet.io"
+              href="https://gateway.pinata.cloud/ipfs/QmYd1HcjaUE3mVCRbZjtnCx5CK72rtaKRFndE8GPvBSrko/Lite%20Paper.pdf"
               target="_blank"
               rel="noreferrer"
               className="nav-button-link"
             >
               <p className="nav-button">About</p>
             </a>
+            <div className="font-aws">
+              <a
+                href="https://twitter.com/Pizza__Wallet"
+                target="_blank"
+                rel="noreferrer"
+                className="icons"
+              >
+                <i className="fa-brands fa-discord icons" aria-hidden="true"></i>
+              </a>
+            </div>
             <div className="font-aws">
               <a
                 href="https://twitter.com/Pizza__Wallet"
@@ -136,7 +126,26 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="absoluteContainer">
+          
+        <div className="media">
+          <img src={background}  />
+        </div>
+        <div className="main-button-container">
+          
+          <button onClick={handleButtonClick} className="pushable">
+              <span className="shadow"></span>
+              <span className="edge"></span>
+              <span className="front">
+                  GET A SLICE
+              </span>
+          </button>
+        </div>
+        
+      </div>
+      
+    </>
   );
 }
 
