@@ -1,0 +1,1056 @@
+/*  rubik font */
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+}
+
+:root {
+  --color-text : #E5E4F8;
+  --color-secondary:  #3E389F;
+  --color-text-light : #EFEFEF;
+  --color-text-dark :#3A3A3A;;
+  --color-text-white : #FFFFFF;
+}
+
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Rubik', sans-serif;
+  background-color: #366A98;
+  background: transparent;
+  color: var(--color-text);
+  
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #E5E4F8;
+  outline: 1px solid #E5E4F8;
+}
+
+main{
+  
+}
+
+header{
+  /* margin: 0 2rem 4rem; */
+  padding:  0 3.5rem;
+  padding-top: 2rem;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  /* background-color: red; */
+  background-color: #051426;
+  background: transparent;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  z-index: 1000;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* background-color: green; */
+}
+
+/* hide nav-bar */
+.nav--hidden {
+  transform: translateY(-7rem);
+  box-shadow: none;
+}
+
+.nav--background{
+  background-color: #051426;
+}
+/* ===================== */
+
+
+.nav__logo{
+}
+.nav__logo img{
+  /* width: 18.2rem;
+  height: 3rem; */
+  width: 125%;
+}
+
+.nav__icons{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 3rem;
+  color: var(--color-text-white);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+
+.nav__socials__icon{
+  display: flex;
+  gap: 3.6rem;
+}
+
+.fa-brands{
+  font-size: 2.4rem;
+  /* height: 2.4rem;
+  width: 2.4rem; */
+  color: var(--color-text-white);
+}
+
+
+
+.landing__page__wrapper{
+  /* background: linear-gradient(180deg, #051426 0%, #3E389F 29.86%); */
+  /* background: linear-gradient(180deg, #1A2252 0%, #303081 100%); */
+  background-color: #051426;
+
+  /* height: 294rem; */
+}
+
+.landing__page{
+}
+
+.landing__page__main{
+  width: 100%;
+  height: auto;
+  /* height: 95vh;  */
+  margin: auto;
+  /* margin-top: 2rem; */
+  /* background-color: red; */
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 25rem;
+
+  position: relative;
+
+}
+
+.landing__page__content{
+ width: 45%;
+ height: 100%;
+  /* margin: auto; */
+  margin-top: 14rem;
+  margin-left: 20rem;
+    /* padding: 1rem; */
+}
+
+.landing__page__content h2{
+   font-family: 'Rubik', sans-serif;
+   color: var(--color-text) ;
+   font-size: 3.8rem;
+   line-height: 126.5%;
+   font-weight: 600;
+   margin-bottom: 2.4rem;
+   width: 100%;
+
+
+}
+.landing__page__content p{
+  font-size: 2rem;
+  color:#EFEFEF;;
+  font-weight: 300;
+  line-height: 2.5rem;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  margin-bottom: 4.8rem;
+
+  /* width: 41.9rem; */
+  width: 100%;
+}
+
+.landing__page__image{
+  /* left: 40%; */
+  /* width: 85%; */
+  /* height: 58rem; */
+
+  width: 70%;
+  height: 100%;
+  /* margin-top: -7rem; */
+  
+}
+.landing__page__image img{
+  margin: auto;
+  width: 54%;
+  height: auto;
+  
+  position: absolute;
+  left: 40%;
+  top: -15%;
+
+  /* top: -10%; */
+}
+
+
+
+
+
+.box-join {
+  width: 20.2rem;
+  height: 5.8rem;
+  position: relative;
+  border-radius: 45px;
+  border: none;
+  outline: none;
+}
+
+.box-join:hover {
+  box-shadow: 5px 5px 10px var(--color-text-secondary);
+}
+
+
+
+.pushable {
+  width: 24.4rem;
+  height: 5.8rem;
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+
+  filter: drop-shadow(0px 0px 20px #4DC359);
+}
+
+.shadow {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  width: 102%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform 600ms cubic-bezier(.3, .7, .4, 1);
+
+    display: none;
+}
+
+.edge {
+  position: absolute;
+  top: .3rem;
+  left: .5rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 13px;
+  border: 1px solid #4DC359;
+  background-color: var(--color-title);
+  display: none;
+}
+
+.front {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  border-radius: 12px;
+  /* border: 2px solid var(--color-text); */
+  font-size: 2.4rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--color-text-white);
+  background: #4DC359;
+;
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.pushable:hover {
+  /* filter: brightness(110%); */
+}
+
+.pushable:hover .front {
+  transform: translateY(-6px);
+  transition:
+    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .front {
+  transform: translateY(-1px);
+  transition: transform 34ms;
+}
+
+.pushable:hover .shadow {
+  transform: translateY(4px);
+  transition:
+    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+/* 
+First Section
+*/
+.first__section{
+  background: linear-gradient(180deg, #051426 0%, #3E389F 29.86%);
+
+  padding-bottom: 6.2rem;
+}
+
+.first__section__highlight{
+  margin: auto;
+  margin-top: 8.4rem;
+  /* margin-bottom: 10.2rem; */
+  text-align: center;
+  width: 48.8rem;
+  height: 9.2rem;
+  font-size: 3.6rem;
+  font-weight: 400;
+  font-family: 'Gloria Hallelujah', cursive;
+  line-height: 146.5%;
+
+  color: #E5E4F8;
+  text-shadow: 0px 0px 30px rgba(139, 136, 195, 0.89), 0px 0px 20px #9D98E8;
+}
+
+
+
+/* first Section Cards */
+/* .first__card__container-1{
+
+  width: 80%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  gap: 3.5rem;
+  margin-bottom: 3.5rem;
+  margin-top: 10.2rem;
+} */
+
+.first__card__container{
+  width: 80%;
+  height: auto;
+  height: 38rem;
+  margin: auto;
+  display: flex;
+  gap: 3.5rem;
+
+  margin-top: 10.2rem;
+}
+
+.first__card{
+  margin-left: 7rem;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  /* padding: 8rem; */
+}
+
+
+.card__front{
+  position: absolute;
+  /* width: 55.1rem; */
+  width: 97%;
+  height: auto;
+  /* height: 36rem; */
+  background: linear-gradient(180deg, #1A2252 0%, #303081 0%);
+  background: linear-gradient(180deg, #1A2252 0%, #303081 100%);
+  z-index: 10;
+  border: .3rem solid #8B88C3;
+  border-radius: 3rem;
+
+  /* display: none; */
+}
+.card__back{
+  position: absolute;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 97%;
+  height: auto;
+  background: url(./assets/Mask\ group\ \(1\).svg);
+  background-position-y: 2rem;
+  background-position-x: -43rem;
+  background-size: 250%;
+  background-repeat: no-repeat;
+
+  border: .3rem solid #8B88C3;
+  border-radius: 3rem;
+}
+
+
+.first__card .card__content{
+  margin-top: 4rem;
+  padding: 6rem;
+  width: 100%;
+  position: relative;
+}
+.card__content h1{
+  color: #51C360;
+  
+  text-shadow: 0px 0px 80px #4DC359, 0px 0px 30px #4DC359;
+  position: absolute;
+  left: 80%;
+  top: 7%;
+  
+
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 126.5%;
+  text-align: center;
+}
+
+
+.first__card .card__heading{
+  color: #51C360;
+  font-size: 3.2rem;
+  font-weight: 600;
+  Line-height: 4rem;
+    margin-bottom: 2.2rem;
+
+}
+
+.card__sub-heading {
+  color: var(--color-text-light);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 4%;
+  margin-bottom: 2.2rem;
+}
+
+
+.card__paragraph {
+  color: var(--color-text-light);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 4%;
+  
+}
+
+
+.first__card__arrow{
+  width: 24.8rem;
+    height: 16.8rem;
+  margin-top: 17.3rem;
+}
+
+
+
+/* 
+second card 
+*/
+.second__card__container {
+  width: 80%;
+  height: 35rem;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3.5rem;
+  /* text-align: right; */
+
+  margin-top: 4rem;
+ 
+}
+
+
+.second__card__arrow  {
+  
+  margin-top: 17.6rem;
+}
+
+.second__card {
+  margin-right: 4rem;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  /* text-align: right; */
+  /* display: flex; */
+}
+
+.second__card .card__front {
+  background: #3F399F;
+}
+
+.second__card .card__content {
+  padding: 4rem ;
+  width: 100%;
+  /* height: 80%; */
+  position: relative;
+  /* margin-left: 7rem; */
+  /* margin: 4rem; */
+  text-align: right;
+
+}
+
+.second__card .card__content h1 {
+  color: #FF931E;
+  
+  text-shadow: 0px 0px 80px #FF931E, 0px 0px 30px #FE932B;
+  position: absolute;
+  left: 10%;
+  top: 5%;
+
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 126.5%;
+  text-align: center;
+}
+
+
+.second__card .card__heading {
+  color: #FF931E;
+  font-size: 3.2rem;
+  font-weight: 600;
+  Line-height: 4rem;
+  /* width: 45rem; */
+  /* height: 8.2rem; */
+  margin-bottom: 2.2rem;
+}
+
+
+
+
+
+
+/* third Section Cards */
+.third__card__container {
+  width: 80%;
+  height: 40rem;
+  margin: auto;
+  display: flex;
+  gap: 3.5rem;
+
+  margin-top: 4rem;
+}
+
+.third__card {
+  margin-left: 7rem;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+
+.card__front-3 {
+  position: absolute;
+  width: 97%;
+  height: auto;
+  background: #3F399F;
+  z-index: 10;
+  border: .3rem solid #8B88C3;
+  border-radius: 3rem;
+
+  /* display: none */
+}
+
+.card__back-3 {
+  position: absolute;
+  margin-top: 1.5rem;
+  margin-left: 1.8rem;
+  /* width: 55.1rem; */
+  width: 97%;
+  height: auto;
+  
+  background: url(./assets/Mask\ group\ \(1\).svg);
+  background-position-y: 1.5rem;
+  background-position-x: -51rem;  
+  background-repeat: no-repeat;
+  border: .3rem solid #8B88C3;
+  border-radius: 3rem;
+}
+
+.card__content-3 {
+  padding: 5rem;
+  width: 100%;
+  position: relative;
+}
+
+.card__content-3 h1 {
+  color: #78D7E0;
+  
+  text-shadow: 0px 0px 80px #78D7E0, 0px 0px 30px #78D7E0;
+  position: absolute;
+  left: 80%;
+  top: 5%;
+
+
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 126.5%;
+  text-align: center;
+}
+
+.card__heading-3 {
+  color: #78D7E0;
+  font-size: 3.2rem;
+  font-weight: 600;
+  Line-height: 4rem;
+  margin-bottom: 2.2rem;
+}
+
+.card__sub-heading-3 {
+  color: var(--color-text-light);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 4%;
+  margin-bottom: 2.2rem;
+}
+
+
+.card__paragraph-3 {
+  color: var(--color-text-light);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  letter-spacing: 4%;
+
+}
+
+
+.third__card__arrow img {
+
+  margin-top: 17.9rem;
+}
+
+
+
+/* Fourth Section Cards */
+.fourth__card__container {
+  width: 80%;
+  height: 40rem;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3.5rem;
+  /* text-align: right; */
+
+  margin-top: 2rem;
+
+}
+
+
+.fourth__card__arrow {
+
+  margin-top: 17.6rem;
+  display: none;
+}
+
+.fourth__card {
+  margin-right: 4rem;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  text-align: right;
+  display: flex;
+}
+
+.fourth__card .card__front {
+  background: #3F399F;
+}
+
+.fourth__card .card__content {
+  padding: 5rem ;
+  width: 100%;
+  /* height: 80%; */
+  position: relative;
+  /* margin-left: 7rem; */
+
+}
+
+.fourth__card .card__content h1 {
+  color: #FECC2B;
+  text-shadow: 0px 0px 80px #F0B90B, 0px 0px 30px #F0B90B;
+  position: absolute;
+  left: 7%;
+  top: 7%;
+
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 126.5%;
+  text-align: center;
+}
+
+
+.fourth__card .card__heading {
+  color: #FECC2B;
+  font-size: 3.2rem;
+  font-weight: 600;
+  Line-height: 4rem;
+  /* height: 8.2rem; */
+  margin-bottom: 2.2rem;
+
+}
+
+
+
+
+
+
+/* 
+second section
+*/
+.second__section{
+  background-color: #E5E4F8;;
+  /* height: 100vh; */
+  padding-bottom: 9.8rem;
+}
+
+.second__section__wrapper{
+  margin: auto;
+}
+
+.second__section__flex{
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.flex__content{
+  width: 50%;
+  margin: auto;
+
+  margin-top: 20.8rem;
+  margin-left: 7rem;
+}
+
+.flex__content__heading h3{
+  color: var(--color-secondary);
+  font-style: normal;
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 126.5%;
+
+    margin-bottom: 3.1rem;
+}
+.flex__content__paragraph{
+  color: var(--color-text-dark);
+  font-style: normal;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 124%;
+}
+.flex__content__heading p{
+  width: 100%;
+}
+
+
+.flex__images {
+  width: 46.3rem;
+  width: 50%;
+
+  margin-top: 6.1rem;
+}
+.flex__images img{
+  width: 90%;
+}
+
+
+/* second section highlight */
+.second__section__highlight {
+  /* background: url(./assets/Gennarino\ 1.png); */
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  margin: auto;
+  margin-top: 11.5rem;
+  width: 87%;
+  height: 43.2rem;
+  border-radius: 4rem;
+
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #3F399F;
+
+  /* display: flex; */
+  /* mix-blend-mode: overlay; */
+
+}
+
+.highlight__wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  
+  /* background-color: red; */
+}
+.pizza__man{
+  background: url(./assets/Gennarino\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  border-radius: 4rem;
+  width: 60%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+
+
+.shadow__highlight{
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  background: linear-gradient(90.15deg, #3F399F 58.91%, rgba(63, 57, 159, 0) 83.03%);
+  position: absolute;
+  border-radius: 4rem;
+  /* top: 50%; */
+
+  /* position: relative; */
+
+}
+
+
+.pizza__slice {
+  width: 50%;
+  height: 100%;
+  width: 32.7rem;
+  height: 35.3rem;
+
+  /* text-align: center; */
+  margin-left: 5.8rem;
+  margin-top: 3.9rem;
+  /* position: absolute; */
+  top: 3rem;
+}
+
+.pizza__slice img {
+  /* width: 27rem;
+  height: 29rem; */
+  width: 100%;
+  height: 100%;
+
+}
+
+.highlight__content {
+  color: var(--color-text-light);
+  position: absolute;
+  width: 47.2rem;
+  left: 33%;
+  top: 0;
+  margin-top: 11.5rem;
+
+
+  text-align: center;
+  /* z-index: 99; */
+}
+
+.highlight__content p {
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.8rem;
+  line-height: 126.5%;
+}
+
+
+
+
+.highlight__pushable {
+  margin-top: 4rem;
+  
+  width: 34.6rem;
+  height: 7.1rem;
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+
+  filter: drop-shadow(0px 0px 30px #51C360);
+  
+}
+
+.highlight__pushable:hover {
+  /* filter: brightness(110%); */
+}
+
+.highlight__pushable:hover .front {
+  transform: translateY(-6px);
+  transition:
+    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.highlight__pushable:active .front {
+  transform: translateY(-1px);
+  transition: transform 34ms;
+}
+
+.highlight__pushable:hover .shadow {
+  transform: translateY(4px);
+  transition:
+    transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.highlight__pushable:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.highlight__pushable:focus:not(:focus-visible) {
+  outline: none;
+}
+
+
+
+
+/* footer */
+.footer{
+  background-color: #FFF1E3;
+}
+
+.footer__wrapper{
+  /* padding-bottom: 1.2rem; */
+  /* height: 24.5rem; */
+    background: #1F1C50;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.footer__rows{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 4.2rem;
+  /* margin-left: 10rem; */
+}
+
+.footer__logo__row-1{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.footer__socials{
+  display: flex;
+  gap: 3.5rem;
+
+  margin-bottom: 6.2rem;
+}
+
+
+
+.footer__row-2 h3, 
+.footer__row-3 h3,
+.footer__row-3 h3,
+.footer__row-4 h3{
+  color: var(--color-text-white);
+  font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 124%;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 1.2rem;
+    width: 100%;
+}
+.footer__row-3 {
+}
+
+.footer__row-2 p,
+.footer__row-3 p,
+.footer__row-4 p{
+  color: var(--color-text-light);
+  color: var(--color-text-white);
+  font-style: normal;
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: 124%;
+    letter-spacing: 0.04em;
+
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+
+.footer__row-1 {
+  /* margin-right: 17.3rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* 
+.footer__row-2 {
+  margin-right: 15rem;
+}
+.footer__row-3{
+  margin-right: 5rem;
+}
+.footer__row-4{
+  margin-right: 20rem;
+} */
+
+
+.footer__copyright{
+  color: rgba(255, 255, 255, 0.7);
+  font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 124%;
+    letter-spacing: 0.04em;
+
+  /* margin-left: 10rem; */
+  /* padding-bottom: 1.7rem; */
+  margin-bottom: 6.2rem;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1500px) {
+  .card__back {
+      background-position-y: 0rem;
+      background-position-x: -40rem;
+  
+      background-size: 210%;
+    }
+}
