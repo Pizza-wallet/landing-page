@@ -3,8 +3,12 @@
 const nav = document.querySelector('.header')
 let lastScrollY = window.scrollY
 
+
+// if (window.matchMedia("(min-width: 700px)").matches){
+
+// }
 window.addEventListener('scroll', () => {
-    if (lastScrollY <= window.scrollY) {
+    if (lastScrollY < window.scrollY) {
         nav.classList.add('nav--hidden')
 
     }
@@ -20,11 +24,50 @@ window.addEventListener('scroll', () => {
 })
 
 
+// Menu
+
+const toggleMenu = document.querySelector('.toggle__menu')
+const sideMenu = document.querySelector('.side__menu')
+const sideMenuClose = document.querySelector('.side__menu-close')
+
+toggleMenu.addEventListener('click', () => {
+    sideMenu.classList.toggle('visible')
+})
+
+sideMenu.addEventListener('click', ()=> {
+    sideMenu.classList.remove('visible')
+})
+
+
+function showCard() {
+  var card = document.getElementById("onclick__card");
+  if (card.style.display === "none") {
+    card.style.display = "block";
+  } else {
+    card.style.display = "none";
+  }
+}
+
+
+const card = document.querySelector('#onclick__card')
+const button = document.querySelector('.pushable')
+const close = document.querySelector('.side_bar-close')
+const main = document.querySelector('.main')
+
+
+button.addEventListener('click', () => {
+    card.classList.toggle('visible')
+    main.classList.toggle('visible')
+
+})
 
 
 
+close.addEventListener('click', () => {
+    card.classList.add('hide')
+    main.classList.remove('visible')
 
-
+})
 
 
 
