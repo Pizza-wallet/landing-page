@@ -1,5 +1,4 @@
 // enable hidden nav bar
-
 const nav = document.querySelector('.header')
 let lastScrollY = window.scrollY
 
@@ -24,8 +23,7 @@ window.addEventListener('scroll', () => {
 })
 
 
-// Menu
-
+// Side-Menu
 const toggleMenu = document.querySelector('.toggle__menu')
 const sideMenu = document.querySelector('.side__menu')
 const sideMenuClose = document.querySelector('.side__menu-close')
@@ -50,7 +48,7 @@ sideMenu.addEventListener('click', ()=> {
 
 
 
-
+// Pop-up Card
 const card = document.querySelector('#onclick__card')
 const button = document.querySelector('.pushable')
 const button2 = document.querySelector('#pushable2')
@@ -58,28 +56,45 @@ const button2 = document.querySelector('#pushable2')
 const close = document.querySelector('.side_bar-close')
 const main = document.querySelector('.main')
 
+const disableScroll = document.querySelector('.body')
+
 
 button.addEventListener('click', () => {
     card.classList.toggle('visible')
     main.classList.toggle('visible')
+    disableScroll.classList.add('stop-scrolling')
+
 
 })
 button2.addEventListener('click', ()=> {
     card.classList.toggle('visible')
     main.classList.toggle('visible')
+    disableScroll.classList.add('stop-scrolling')
+
 
 })
-
-
 
 close.addEventListener('click', () => {
     card.classList.remove('visible')
     main.classList.remove('visible')
+    disableScroll.classList.remove('stop-scrolling')
+
+
 
 })
 
 
+// click outside of Pop-up card to close
+document.addEventListener('click', function handleClickOutsideBox(event) {
+  if (!button.contains(event.target) & !button2
+  .contains(event.target)) {
+    card.classList.remove('visible')
+    main.classList.remove('visible')
+    disableScroll.classList.remove('stop-scrolling')
 
+  }
+  
+})
 
 
 
