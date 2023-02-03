@@ -39,18 +39,22 @@ sideMenu.addEventListener('click', ()=> {
 })
 
 
-function showCard() {
-  var card = document.getElementById("onclick__card");
-  if (card.style.display === "none") {
-    card.style.display = "block";
-  } else {
-    card.style.display = "none";
-  }
-}
+// function showCard() {
+//   var card = document.getElementById("onclick__card");
+//   if (card.style.display === "none") {
+//     card.style.display = "block";
+//   } else {
+//     card.style.display = "none";
+//   }
+// }
+
+
 
 
 const card = document.querySelector('#onclick__card')
 const button = document.querySelector('.pushable')
+const button2 = document.querySelector('#pushable2')
+
 const close = document.querySelector('.side_bar-close')
 const main = document.querySelector('.main')
 
@@ -60,11 +64,16 @@ button.addEventListener('click', () => {
     main.classList.toggle('visible')
 
 })
+button2.addEventListener('click', ()=> {
+    card.classList.toggle('visible')
+    main.classList.toggle('visible')
+
+})
 
 
 
 close.addEventListener('click', () => {
-    card.classList.add('hide')
+    card.classList.remove('visible')
     main.classList.remove('visible')
 
 })

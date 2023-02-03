@@ -59,7 +59,7 @@
             <p>
               Pizza wallet is a secure and easy-to-use platform where you can buy, store, and transact your crypto on multiple chains.
             </p>
-            <button onclick="showCard()" class="pushable">
+            <button class="pushable" id="pushable">
               <span class="shadow"></span>
               <span class="edge"></span>
               <span class="front"> Apply for BETA </span>
@@ -324,7 +324,7 @@
                   Get ready to join <br />
                   the future of money
                 </p>
-                <button onclick="showCard()" class="highlight__pushable">
+                <button class="highlight__pushable " id="pushable2">
                   <span class="shadow"></span>
                   <span class="edge"></span>
                   <span class="front"> Apply for BETA </span>
@@ -402,13 +402,13 @@
       </footer>
     </main>
 
-     <div id="onclick__card">
+     <form action="https://formspree.io/f/mknawajg" method="POST" id="onclick__card">
           <div class="box-1">
             <!-- <img src="./assets/Mask group.svg" alt=""> -->
           </div>
           <div class="box-2">
 
-            <div onclick="showCard()" class="side_bar-close" id="sidebar-close">
+            <div class="side_bar-close" id="sidebar-close">
               <span></span>
               <span></span>
               <span></span>
@@ -417,8 +417,9 @@
             <div class="onclick__content">
                 <h2>We are releasing (really) soon!</h2>
                 <p>Drop your email id here to get early access to our beta release</p>
-                <input type="text" placeholder="Email">
-                <button class="pushable">
+                <input name="email" type="text" placeholder="Email">
+
+                <button type="submit" class="pushable">
                 <span class="shadow"></span>
                 <span class="edge"></span>
                 <span class="front"> Apply for BETA </span>
@@ -427,7 +428,9 @@
 
           </div>
           
-        </div>
+        </form>
+          <p id="my-form-status"></p>
+
 
         <!-- sidebar-menu -->
         <div class="side__menu">
@@ -438,19 +441,19 @@
                 <a target="_blank" href="https://twitter.com/Pizza__wallet"
                   ><i class="fa-brands side-brands fa-twitter"></i
                 ></a>
-                <p>Twitter</p>
+                <p><a target="_blank" href="https://twitter.com/Pizza__wallet">Twitter</a></p>
               </li>
               <li class="side__menu-flex">
-                <a target="_blank" href="https://twitter.com/Pizza__wallet"
+                <a target="_blank" href="https://discord.gg/nheCXDejEZ"
                   ><i class="fa-brands side-brands fa-discord"></i
                 ></a>
-                <p>Discord</p>
+                <p><a target="_blank" href="https://discord.gg/nheCXDejEZ">Discord</a></p>
               </li>
               <li class="side__menu-flex">
-                <a target="_blank" href="https://twitter.com/Pizza__wallet"
+                <a target="_blank" href="https://www.instagram.com/pizza__wallet/"
                   ><i class="fa-brands side-brands fa-instagram"></i
                 ></a>
-                <p>instagram</p>
+                <p><a target="_blank" href="https://www.instagram.com/pizza__wallet/">instagram</a></p>
               </li>
               
             </ul>

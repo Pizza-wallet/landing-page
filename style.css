@@ -32,6 +32,9 @@ body{
   background-color: #366A98;
   background: transparent;
   color: var(--color-text);
+  background-color: black;
+  /* mix-blend-mode: darken; */
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
   
 }
 
@@ -44,8 +47,9 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba(58, 58, 58, 0.6);
-  outline: 1px solid rgba(58, 58, 58, 0.6);
+  background-color: #E5E4F8;
+  outline: 1px solid #E5E4F8;
+  
 }
 
 a{
@@ -62,7 +66,7 @@ main{
   
 }
 .main.visible {
-  opacity: 0.5;
+  opacity: 0.4;
   /* mix-blend-mode: darken;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
   transition: 0.5s linear;
@@ -177,12 +181,10 @@ nav{
   height: auto;
   /* height: 95vh;  */
   margin: auto;
-  /* margin-top: 2rem; */
-  /* background-color: red; */
   display: flex;
   gap: 1rem;
   padding: 1rem;
-  margin-bottom: 25rem;
+  margin-bottom: 15rem;
 
   position: relative;
 
@@ -222,13 +224,9 @@ nav{
 }
 
 .landing__page__image{
-  /* left: 40%; */
-  /* width: 85%; */
-  /* height: 58rem; */
 
   width: 70%;
   height: 100%;
-  /* margin-top: -7rem; */
   
 }
 .landing__page__image img{
@@ -368,13 +366,11 @@ onclick Card
   /* width: 61.5rem; */
   width: 40%;
   /* height: 80%; */
-  height: 52.4rem;
+  height: 50rem;
   margin:  auto;
 
-  /* position: absolute; */
   top: 15%;
-  left: 35%;
-  /* background-color: red; */
+  left: 30%;
   border-radius: 3rem;
   background: #1A2252;
   border: .3rem solid #8B88C3;
@@ -384,14 +380,13 @@ onclick Card
   align-self: center  ;
 }
 
-#onclick__card .visible{
+#onclick__card.visible{
   display: block;
 }
 
-#onclick__card .hide{
+/* #onclick__card .hide{
   display: none;
-  transition: 20s ease-out;
-}
+} */
 
 
 
@@ -400,32 +395,26 @@ onclick Card
   width: 100%;
   /* background-color: green; */
   position: absolute;
-  background: url(./assets/Group\ 850.png);
-  background-size: 410%;
-  background-position-x: 48%;
-  background-position-y: -5%;
+  background: url(./assets/Mask\ group\ \(1\).svg);
+  background-size: 300%;
+  background-position-x: 58%;
+  background-position-y: 3.5rem;
   background-repeat: no-repeat;
 
   border-radius: 3rem;
 
-  border: .1rem solid #3E389F;
+  /* border: .1rem solid #3E389F; */
 }
-/* .box-1 img{
-  width: 100%;
-  height: 150%;
-  object-fit: cover;
-  border-radius: 4rem;
-} */
+
 
 .box-2{
-  /* display: none; */
   height: 100%;
   width: 100%;
   background-color: purple;
   background: #1A2252;
   position: absolute;
-  top: -2.2rem;
-  left: -2.2rem;
+  top: -1.5rem;
+  left: -1.5rem;
 
   border-radius: 3rem;
   border: .3rem solid #8B88C3;
@@ -498,7 +487,7 @@ onclick Card
 .onclick__content button{
   width: 100%;
 
-  margin-bottom: 5.3rem;
+  margin-bottom: 2.3rem;
 }
 
 
@@ -506,10 +495,10 @@ onclick Card
 .side_bar-close {
   cursor: pointer;
   position: absolute;
-  right: 32px;
-  top: 32px;
-  width: 32px;
-  height: 32px;
+  right: 3.2rem;
+  top: 3.2rem;
+  width: 3.2rem;
+  height: 3.2rem;
   opacity: 0.7;
 }
 
@@ -522,14 +511,13 @@ onclick Card
   position: absolute;
   left: 15px;
   content: ' ';
-  height: 33px;
-  width: 2px;
+  height: 3.3rem;
+  width: .2rem;
   background-color: #8B88C3;
 }
 
 .side_bar-close:before {
   transform: rotate(45deg);
-  border: 1.5px solid #8B88C3;
 }
 
 .side_bar-close:after {
@@ -608,7 +596,6 @@ First Section
   width: 97%;
   height: auto;
   /* height: 36rem; */
-  background: linear-gradient(180deg, #1A2252 0%, #303081 0%);
   background: linear-gradient(180deg, #1A2252 0%, #303081 100%);
   z-index: 10;
   border: .3rem solid #8B88C3;
@@ -1198,7 +1185,7 @@ second section
 
 /* footer */
 .footer{
-  background-color: #FFF1E3;
+  background-color: #E5E4F8;
 }
 
 .footer__wrapper{
@@ -1320,10 +1307,25 @@ second section
   .card__back {
   background: url(./assets/Group\ 850.png);
       background-position-y: -1rem;
-      background-position-x: -43rem;
+      background-position-x: 50%;
   
-      background-size: 250%;
+      background-size: 300%;
     }
+
+  .first__card .card__paragraph,
+  .second__card .card__paragraph,
+  .third__card .card__paragraph-3,
+  .fourth__card .card__paragraph{
+    width: 90%;
+  }
+
+  .card__paragraph-3 br{
+    display: none;
+  }
+
+  .flex__content{
+    margin-top: 40rem;
+  }
 }
 
 
@@ -1559,7 +1561,7 @@ second section
     /* left: 15%; */
   }
 
-    #onclick__card .visible {
+    #onclick__card.visible {
       display: block;
     }
   
@@ -1638,7 +1640,58 @@ second section
 }
 
 
+@media screen and (min-width:600px) and (max-width:1300px) {
 
+  #onclick__card{
+    width: 50%;
+  }
+  .onclick__content {
+      margin-top: 6rem;
+      width: 80%;
+      height: 80%;
+    }
+
+  .box-1 {
+    background-size: 450%;
+    background-position-x: 50%;
+    background-position-y: 1rem;
+  }
+  
+    /* .onclick__content h2 {
+    }
+  
+    .onclick__content p {
+      margin-bottom: 1.6rem;
+    }
+  
+    .onclick__content input {
+      margin-bottom: 1.6rem;
+      height: 3.8rem;
+    }
+  
+  
+    .onclick__content button {
+      margin-bottom: 1rem;
+      height: 3.8rem;
+    }
+  
+    .onclick__content button .front {
+      font-size: 1.8rem;
+    }
+  
+    .side_bar-close {
+      top: 7%;
+    }
+  
+    
+  
+    .box-2 {
+      top: -1.2rem;
+      left: -1.2rem;
+    }
+  
+  } */
+}
 
 /* Small Devices */
 @media screen and (max-width:600px) {
@@ -1704,7 +1757,7 @@ second section
     }
   
 
-  .side__menu p{
+  .side__menu p a {
   /* font-family: 'Gloria Hallelujah', cursive; */
     font-size: 1.8rem;
     color: #303081;
@@ -1984,13 +2037,13 @@ second section
     }
 
   .box-1{
-    background-size: 500% ;
-    background-position-x: -54rem ;
+    background-size: 450% ;
+    background-position-x: 50% ;
     background-position-y: 1rem ;
   }
   .box-2{
-    top: -1.8rem;
-    left: -1.8rem;
+    top: -1.2rem;
+    left: -1.2rem;
   }
   
 }
@@ -2043,3 +2096,7 @@ second section
     background-size: 450%;
   }
 }
+
+
+
+
