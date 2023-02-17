@@ -37,16 +37,6 @@ sideMenu.addEventListener('click', ()=> {
 })
 
 
-// function showCard() {
-//   var card = document.getElementById("onclick__card");
-//   if (card.style.display === "none") {
-//     card.style.display = "block";
-//   } else {
-//     card.style.display = "none";
-//   }
-// }
-
-
 
 // Pop-up Card
 const card = document.querySelector('#onclick__card')
@@ -60,15 +50,15 @@ const disableScroll = document.querySelector('.body')
 
 
 button.addEventListener('click', () => {
-    card.classList.toggle('visible')
-    main.classList.toggle('visible')
+    card.classList.add('visible')
+    main.classList.add('visible')
     disableScroll.classList.add('stop-scrolling')
 
 
 })
 button2.addEventListener('click', ()=> {
-    card.classList.toggle('visible')
-    main.classList.toggle('visible')
+    card.classList.add('visible')
+    main.classList.add('visible')
     disableScroll.classList.add('stop-scrolling')
 
 
@@ -83,18 +73,14 @@ close.addEventListener('click', () => {
 
 })
 
-
-// click outside of Pop-up card to close
-document.addEventListener('click', function handleClickOutsideBox(event) {
-  if (!button.contains(event.target) & !button2
-  .contains(event.target)) {
-    card.classList.remove('visible')
-    main.classList.remove('visible')
-    disableScroll.classList.remove('stop-scrolling')
-
-  }
-  
+main.addEventListener('click', (event) => {
+    if(!button.contains(event.target)  & !button2.contains(event.target) )  {
+        card.classList.remove('visible')
+        main.classList.remove('visible')
+        disableScroll.classList.remove('stop-scrolling')
+    }
 })
+
 
 
 

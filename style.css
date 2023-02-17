@@ -90,7 +90,6 @@ header{
   /* background-color: red; */
   background-color: #051426;
   background: transparent;
-  /* box-shadow:  0 0 10px rgba(0, 0, 0, 0.2); */
   transition: transform 0.2s;
   z-index: 1000;
 }
@@ -101,7 +100,6 @@ nav{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* background-color: green; */
   position: relative;
 }
 
@@ -237,6 +235,7 @@ nav{
   margin: auto;
   width: 54%;
   height: auto;
+  pointer-events: none;
   
   position: absolute;
   left: 40%;
@@ -1110,6 +1109,7 @@ second section
   height: 29rem; */
   width: 100%;
   height: 100%;
+  pointer-events: none; 
 
 }
 
